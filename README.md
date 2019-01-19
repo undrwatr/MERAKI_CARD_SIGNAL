@@ -1,0 +1,3 @@
+Script for pulling the make and signal strength of wireless cards
+
+We are trying to continually audit our LTE cards in the Meraki Routers so we wanted to be able to monitor the stores LTE connections and see the signal strength and then determine which if any needed to be swapped out. However that data is only stored at the device level so you have to iterate through the whole Organization then by network and then by device in the network. Meraki has a polling limit for how many times you can poll the cloud per second so I put a 1 second delay in there to keep the program from overwhelming everything and causing issues for itself or for our users monitoring on the website.
